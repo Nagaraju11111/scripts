@@ -1,0 +1,7 @@
+az group create -l 'eastus' -n 'practice'
+az sql server create --name 'qtsql' --resource-group 'practice' --location 'eastus' --admin-user 'devops' `
+                     --admin-password 'Naveen#123456'
+
+az sql db create --name 'qtdb' --resource-group 'practice' --server 'qtsql' 
+
+az group delete --name 'practice' -y
